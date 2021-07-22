@@ -33,6 +33,8 @@ export function Home() {
 
     if (email !== '' && password !== '') {
       toast.success('Usuário autenticado.');
+      setEmail('');
+      setPassword('');
     } else {
       toast.error('Preencha os campos corretamente.');
     }
@@ -41,7 +43,6 @@ export function Home() {
   return (
     <>
       <div><Toaster/></div>
-
       {
         modalVisible && (
           <RegisterModal isOpen={setModalVisible} />
