@@ -1,0 +1,36 @@
+:root {
+  --background: #f1f2f5;
+  --text: #333;
+  --muted: #999;
+  --primary: #0a81ab;
+  --primary-dark: #0c4271;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+input,
+textarea,
+select,
+button,
+body {
+  font: 400 1rem "Montserrat", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  border: none;
+}

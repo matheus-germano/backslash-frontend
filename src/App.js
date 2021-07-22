@@ -1,6 +1,19 @@
+// importing dependencies
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+// Importing pages
+import { Home } from './pages/Home';
+
+// importing global style
+import './global.css';
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
