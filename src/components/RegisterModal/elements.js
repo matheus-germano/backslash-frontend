@@ -10,6 +10,11 @@ export const ModalBackground = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
+
+  transition: opacity .5s;
+
+  top: ${props => props.visible ? '0' : '-100%' };
+  opacity: ${props => props.visible ? '1' : '0' };
 `;
 
 export const ModalContainer = styled.div`

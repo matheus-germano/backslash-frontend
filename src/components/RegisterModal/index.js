@@ -18,7 +18,7 @@ import {
   ModalButton
 } from './elements'
 
-export function RegisterModal({ isOpen }) {
+export function RegisterModal({ isOpen, setIsOpen }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,11 +36,11 @@ export function RegisterModal({ isOpen }) {
   return (
     <>
       <div><Toaster/></div>
-      <ModalBackground>
+      <ModalBackground visible={isOpen}>
         <ModalContainer>
           <ModalHeader>
             <ModalTitle>Cadastre-se!</ModalTitle>
-            <FaTimes onClick={() => isOpen(false)} />
+            <FaTimes onClick={() => setIsOpen(false)} />
           </ModalHeader>
           <ModalBody>
             <img src={register} alt="" />

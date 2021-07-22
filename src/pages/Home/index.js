@@ -47,11 +47,7 @@ export function Home() {
   return (
     <>
       <div><Toaster/></div>
-      {
-        modalVisible && (
-          <RegisterModal isOpen={setModalVisible} />
-        )
-      }
+      <RegisterModal isOpen={modalVisible} setIsOpen={setModalVisible} />
       <HomeContainer>
         <HomeHeader>
           <img src={logo} alt='backSlash_' />
