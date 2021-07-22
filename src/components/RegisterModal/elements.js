@@ -18,6 +18,11 @@ export const ModalContainer = styled.div`
 
   background: var(--background);
   border-radius: 10px;
+
+  @media (max-width: 400px) {
+    width: 350px;
+    height: 95%;
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -32,6 +37,10 @@ export const ModalHeader = styled.div`
   svg {
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 400px) {
+    padding: 10px;
   }
 `;
 
@@ -58,6 +67,10 @@ export const ModalBody = styled.div`
 
   img {
     width: 256px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 10px;
   }
 `;
 

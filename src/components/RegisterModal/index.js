@@ -19,13 +19,14 @@ import {
 } from './elements'
 
 export function RegisterModal({ isOpen }) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   function registerUser(e) {
     e.preventDefault();
 
-    if (email !== '' && password !== '') {
+    if (name !== '' && email !== '' && password !== '') {
       toast.success('Usuário autenticado.');
     } else {
       toast.error('Preencha os campos corretamente.');
@@ -47,7 +48,13 @@ export function RegisterModal({ isOpen }) {
               <ModalText>Preencha os dados corretamente.</ModalText>
               <ModalInput 
                 type='text'
-                placeholder='Seu e-mail'
+                placeholder='Seu nome completo'
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
+              <ModalInput 
+                type='text'
+                placeholder='Seu nome completo'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
               />
