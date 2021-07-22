@@ -1,5 +1,6 @@
 // importing dependencies
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { RegisterModal } from '../../components/RegisterModal';
@@ -24,6 +25,7 @@ import {
 } from './elements'
 
 export function Home() {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -35,6 +37,8 @@ export function Home() {
       toast.success('Usuário autenticado.');
       setEmail('');
       setPassword('');
+
+      history.push('/feed');
     } else {
       toast.error('Preencha os campos corretamente.');
     }
