@@ -36,6 +36,13 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 50px;
+  }
 `;
 
 export const HomeAside = styled.aside`
@@ -53,10 +60,18 @@ export const HomeAside = styled.aside`
     @media (max-width: 900px) {
       max-width: 416px;
     }
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 
   @media (max-width: 768px) {
-    display: none;
+    flex: none;
+
+    p, span {
+      display: none;
+    }
   }
 `;
 
@@ -75,6 +90,10 @@ export const HomeSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex: none;
+  }
 `;
 
 export const HomeForm = styled.form`
