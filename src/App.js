@@ -1,5 +1,5 @@
 // importing dependencies
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Importing pages
 import { Home } from './pages/Home';
@@ -12,8 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/feed' component={Feed} />
+        <Route path="/" exact component={Home} />
+        <Route path="/feed" component={Feed} />
       </Switch>
     </BrowserRouter>
   );

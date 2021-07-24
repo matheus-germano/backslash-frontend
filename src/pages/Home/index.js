@@ -21,8 +21,8 @@ import {
   FormTitle,
   FormInput,
   FormButton,
-  FormText
-} from './elements'
+  FormText,
+} from './elements';
 
 export function Home() {
   const history = useHistory();
@@ -46,38 +46,62 @@ export function Home() {
 
   return (
     <>
-      <div><Toaster/></div>
+      <div><Toaster /></div>
       <RegisterModal isOpen={modalVisible} setIsOpen={setModalVisible} />
       <HomeContainer>
         <HomeHeader>
-          <img src={logo} alt='backSlash_' />
+          <img src={logo} alt="backSlash_" />
         </HomeHeader>
         <ContentContainer>
           <HomeAside>
-            <img src={home} alt='' />
-            <HomeText><span>Crie</span> e <span>responda</span> perguntas e <span>interaja</span> com todas as <span>comunidades</span> presentes na plataforma!</HomeText>
+            <img src={home} alt="" />
+            <HomeText>
+              <span>Crie</span>
+              {' '}
+              e
+              {' '}
+              <span>responda</span>
+              {' '}
+              perguntas e
+              {' '}
+              <span>interaja</span>
+              {' '}
+              com todas as
+              {' '}
+              <span>comunidades</span>
+              {' '}
+              presentes na plataforma!
+            </HomeText>
           </HomeAside>
           <HomeSection>
             <HomeForm onSubmit={authenticateUser}>
               <FormTitle>Faça login na plataforma.</FormTitle>
-              <FormInput 
-                type='text'
-                placeholder='Seu e-mail'
+              <FormInput
+                type="text"
+                placeholder="Seu e-mail"
                 value={email}
-                onChange={e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <FormInput 
-                type='password'
-                placeholder='Sua senha'
+              <FormInput
+                type="password"
+                placeholder="Sua senha"
                 value={password}
-                onChange={e => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <FormButton
-                type='submit'
+                type="submit"
               >
                 Entrar
               </FormButton>
-              <FormText>Não tem uma conta? <span onClick={() => setModalVisible(true)}>Cadastre-se</span></FormText>
+              <FormText>
+                Não tem uma conta?
+                {' '}
+                <span // eslint-disable-line jsx-a11y/no-static-element-interactions
+                  onClick={() => setModalVisible(true)}
+                >
+                  Cadastre-se
+                </span>
+              </FormText>
             </HomeForm>
           </HomeSection>
         </ContentContainer>
