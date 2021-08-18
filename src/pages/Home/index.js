@@ -96,7 +96,7 @@ export function Home() {
               <FormText>
                 Não tem uma conta?
                 {' '}
-                <span // eslint-disable-line jsx-a11y/no-static-element-interactions
+                <span
                   onClick={() => setModalVisible(true)}
                 >
                   Cadastre-se

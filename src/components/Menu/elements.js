@@ -8,7 +8,7 @@ export const MenuContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 50px;
 
   padding: 50px 0;
 
@@ -19,6 +19,11 @@ export const MenuContainer = styled.div`
   @media (max-width: 675px) {
     width: 100%;
     align-items: center;
+
+    transition: all 0.4s ease-in-out;
+
+    position: absolute;
+    left: ${props => props.active ? 0 : '-100%'};
   }
 `;
 
@@ -29,6 +34,22 @@ export const MenuContent = styled.div`
   justify-content: center;
 
   gap: 50px;
+`;
+
+export const MenuIcon = styled.div`
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  svg {
+    display: ${props => props.active ? 'flex' : 'none'};
+    font-size: 1.5rem;
+    color: var(--white);
+
+    cursor: pointer;
+  }
 `;
 
 export const MenuProfile = styled.div`
@@ -94,6 +115,7 @@ export const NavItem = styled.li`
 `;
 
 export const Text = styled.p`
+  margin-top: auto;
   color: var(--white);
   padding: 0 50px;
 

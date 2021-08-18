@@ -1,6 +1,7 @@
 // importing dependencies
 import { Link } from 'react-router-dom';
 import { FiRss, FiUsers, FiSliders } from 'react-icons/fi';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 // importing images
 import profile from '../../assets/images/profile.jpg';
@@ -9,6 +10,7 @@ import profile from '../../assets/images/profile.jpg';
 import {
   MenuContainer,
   MenuContent,
+  MenuIcon,
   MenuProfile,
   UserName,
   MenuNav,
@@ -16,10 +18,13 @@ import {
   Text,
 } from './elements';
 
-export function Menu() {
+export function Menu({ menuIsOpen, setMenuOpen }) {
   return (
     <>
-      <MenuContainer>
+      <MenuContainer active={menuIsOpen}>
+        <MenuIcon active={menuIsOpen} onClick={() => setMenuOpen(false)}>
+          <FaTimes/>
+        </MenuIcon>
         <MenuContent>
           <MenuProfile>
             <img src={profile} alt="" />
