@@ -17,3 +17,11 @@ export const HamburgerMenu = styled.div`
     display: flex;
   }
 `;
+
+export const FeedContainer = styled.div`
+
+`;
+
+export const FeedWrapper = styled.div`
+
+`;
