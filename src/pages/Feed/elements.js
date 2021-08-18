@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const FeedPageContainer =  styled.div`
+  display: flex;
+  gap: 50px;
+
+  @media (max-width: 768px) {
+    gap: 25px;
+  }
+`;
+
 export const HamburgerMenu = styled.div`
   position: absolute;
   padding: 50px;
@@ -19,9 +28,17 @@ export const HamburgerMenu = styled.div`
 `;
 
 export const FeedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  padding: 50px;
 `;
 
 export const FeedWrapper = styled.div`
+
+`;
+
+export const SuggestionsContainer = styled.div`
 
 `;
