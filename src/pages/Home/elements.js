@@ -116,11 +116,12 @@ export const FormInput = styled.input`
   height: 60px;
 
   padding: 0 20px;
+  border: 2px solid transparent;
   margin: 0 auto;
 
   border-radius: 10px;
 
-  transition: width 0.2s;
+  transition: all 0.2s;
 
   ::placeholder {
     color: var(--muted);
@@ -128,8 +129,8 @@ export const FormInput = styled.input`
 
   :focus {
     border: 2px solid var(--primary);
-    padding: 0 18px;
   }
+
 
   @media (max-width: 350px) {
     width: 250px;
